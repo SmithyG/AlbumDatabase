@@ -49,7 +49,7 @@ public class Duration
         //toString method that converts a Duration object into a String object
         public String toString()
         {
-        DecimalFormat df = new DecimalFormat("00.##");
+        DecimalFormat df = new DecimalFormat("00");
         String stringHours = df.format(this.hours);
         String stringMinutes = df.format(this.minutes);
         String stringSeconds = df.format(this.seconds);
