@@ -6,7 +6,8 @@ public class Track
     private Duration duration;
     
     public static void main(String[] args) {
-        Track t1 = new Track();
+        Track t1 = new Track("GnarlyGuyAnthem","02:20:12");
+        System.out.println(t1);
         System.out.println(t1.getDuration());
     }
 
@@ -24,7 +25,14 @@ public class Track
     }
 
     public Track() {
-        this.title = "";
+        this.title = null;
         this.duration = null;
+    }
+    
+    public String toString()
+    {
+        
+        String stringDuration = this.duration.toString();
+        return title + ":" + stringDuration;
     }
 }

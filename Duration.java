@@ -14,8 +14,7 @@ public class Duration
         Duration meme = new Duration(1,30,30);
         System.out.println(meme);
         d1.add(meme);
-        System.out.println(d1);
-        System.out.println(meme);
+        System.out.print(d1);
         
     }
 
@@ -47,7 +46,7 @@ public class Duration
         seconds = Integer.parseInt(stringSeconds);   
         }
         
-        //toString method that converts String input to correct format
+        //toString method that converts a Duration object into a String object
         public String toString()
         {
         DecimalFormat df = new DecimalFormat("00.##");
@@ -55,7 +54,7 @@ public class Duration
         String stringMinutes = df.format(this.minutes);
         String stringSeconds = df.format(this.seconds);
         return stringHours + ":" + stringMinutes + ":" + stringSeconds;
-        }
+        } 
         
         //Add method that accepts another Duration object as a parameter to add to the original object
         public void add(Duration d2)
@@ -69,6 +68,7 @@ public class Duration
             }else{
                 seconds += d2.seconds;
             }
+            
             if(minutes + d2.minutes >= 60)
             {
                 hours += ((minutes + d2.minutes) / 60); //Finds out the amount of extra hours and adds that result to the hours variable
