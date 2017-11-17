@@ -31,8 +31,7 @@ public class Track
     
     public String toString()
     {
-        
         String stringDuration = this.duration.toString();
-        return title + ":" + stringDuration;
+        return title + " : " + stringDuration;
     }
 }

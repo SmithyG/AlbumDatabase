@@ -1,4 +1,5 @@
 package albumdatabase;
+import java.util.Arrays;
 
 public class Album 
 {    
@@ -7,18 +8,19 @@ public class Album
     
     public static void main(String[] args) {
         Track t1 = new Track("GnarlyGuyAnthem","02:20:12");
-        Track t2 = new Track("Test","00:01:40");
-        Track[] t1and2 = new Track[2];
-        t1and2[0] = t1;
-        t1and2[1] = t2;
-        
-        Album a = new Album("Pink Floyd","Dark Side Of The Moon", t1and2);
-        System.out.println(a.getAlbumTitle());
-        System.out.println(a.getArtist());
-        System.out.println(a.getTrack());
+        Track t2 = new Track("Joyclen Flores","04:20:13");
+        Track[] trackList = new Track[5];
+        trackList[0] = t1;
+        trackList[1] = t2;
+        Album a1 = new Album("XXXTentacion","17",trackList);
+        System.out.println(a1);
+
     }
 
     public Album() {
+        artist = "";
+        albumTitle = "";
+        tracks = new Track[0];
     }
 
     public Album(String artist, String albumTitle, Track[] tracks) {
@@ -37,6 +39,10 @@ public class Album
 
     public Track[] getTrack() {
         return tracks;
+    }
+    
+    public String toString(){
+        return "Artist: " + artist + "\nAlbum Title: " + albumTitle + "\nTracks: " + Arrays.toString(tracks);
     }
     
 }
