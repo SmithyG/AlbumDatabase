@@ -6,9 +6,6 @@ public class Track
     private Duration duration;
     
     public static void main(String[] args) {
-        Track t1 = new Track("GnarlyGuyAnthem","02:20:12");
-        System.out.println(t1);
-        System.out.println(t1.getDuration());
     }
 
     public String getTitle() {

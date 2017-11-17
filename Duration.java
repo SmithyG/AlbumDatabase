@@ -9,13 +9,6 @@ public class Duration
 
         public static void main(String[] args) 
     {
-        Duration d1 = new Duration(1,10,10);
-        System.out.println(d1);
-        Duration meme = new Duration(1,30,30);
-        System.out.println(meme);
-        d1.add(meme);
-        System.out.print(d1);
-        
     }
 
     //Constructor that takes integer parameters to build Duration with.

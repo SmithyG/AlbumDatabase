@@ -1,5 +1,6 @@
 package albumdatabase;
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class Album 
 {    
@@ -14,7 +15,6 @@ public class Album
         trackList[1] = t2;
         Album a1 = new Album("XXXTentacion","17",trackList);
         System.out.println(a1);
-
     }
 
     public Album() {
@@ -42,7 +42,7 @@ public class Album
     }
     
     public String toString(){
-        return "Artist: " + artist + "\nAlbum Title: " + albumTitle + "\nTracks: " + Arrays.toString(tracks);
+        return "\nArtist: " + artist + "\nAlbum Title: " + albumTitle + "\nTracks: " + Arrays.toString(tracks);
     }
     
 }
