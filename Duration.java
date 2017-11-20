@@ -1,4 +1,3 @@
-package albumdatabase;
 import java.text.DecimalFormat;
 
 public class Duration 

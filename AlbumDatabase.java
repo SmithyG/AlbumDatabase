@@ -1,6 +1,4 @@
-package albumdatabase;
-
-public class AlbumDatabase 
+public class AlbumDatabase
 {
     public static void main(String[] args) 
     {

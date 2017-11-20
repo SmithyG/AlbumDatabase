@@ -1,5 +1,3 @@
-package albumdatabase;
-
 public class Track
 {
     private String title;

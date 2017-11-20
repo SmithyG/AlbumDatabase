@@ -1,4 +1,3 @@
-package albumdatabase;
 import java.util.Arrays;
 import java.util.ArrayList;
 
