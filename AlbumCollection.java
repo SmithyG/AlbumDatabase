@@ -6,8 +6,12 @@ public class AlbumCollection {
         //POPULATE WITH ARRAY LIST, THEN EMPTY ARRAY LIST INTO PERFECT ARRAY
         Track t1 = new Track("GnarlyGuyAnthem","02:20:12");
         Track t2 = new Track("Joyclen Flores","04:20:13");
-        System.out.println(albums.toString());
+        Track[] tracks = new Track[5];
+        Album a1 = new Album("Test Album","Oh fuck",tracks);
+        albums.add(a1);
         
     }
-    
+
+    public AlbumCollection() {
+    }
 }
