@@ -26,7 +26,7 @@ public class Duration
         this.seconds = 0;
     }
     
-        //Constuctor that accepts String input and parses as Integer
+        //Constructor that accepts String input and parses as Integer
         public Duration(String duration)
         {
         String[] time = duration.split(":");

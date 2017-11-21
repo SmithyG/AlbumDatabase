@@ -33,6 +33,12 @@ public class Album
         return tracks;
     }
 
+    public void addAlbumTracks() {
+        for(int i = 0; i < tracks.length - 1; i++){
+            tracks[0].getDuration().add(tracks[i+1].getDuration());
+        }
+    }
+
     public String toString(){
         return "\nArtist: " + artist + "\nAlbum Title: " + albumTitle + "\nTracks: " + Arrays.toString(tracks);
     }
