@@ -11,7 +11,6 @@ public class AlbumCollection {
         Track[] tracks = new Track[5];
         Album a1 = new Album("Test Album", "Oh fuck", tracks);
         albums.add(a1);
-
     }
 
     public AlbumCollection() {
