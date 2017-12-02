@@ -10,7 +10,7 @@ public class Duration
     {
     }
 
-    //Constructor that takes integer parameters to build Duration with.
+    //Constructor that takes integer arguments to build Duration with.
     public Duration(int hours, int minutes, int seconds) 
     { 
         this.hours = hours;
