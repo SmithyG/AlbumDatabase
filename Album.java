@@ -1,10 +1,9 @@
 import java.util.Arrays;
 
-public class Album implements Comparable<Album>
-{    
-    private String artist,albumTitle;
+public class Album implements Comparable<Album> {
+    private String artist, albumTitle;
     private Track[] tracks;
-    
+
     public static void main(String[] args) {
 
     }
@@ -38,9 +37,14 @@ public class Album implements Comparable<Album>
         return tracks;
     }
 
+    public int getNoTracks()
+    {
+        return tracks.length;
+    }
+
     //toString method to print out attributes of an album object
     //A toString method is used to convert tracks into a understandable format rather than a memory reference
-    public String toString(){
+    public String toString() {
         return "\nArtist: " + artist + "\nAlbum Title: " + albumTitle + "\nTracks: " + Arrays.toString(tracks);
     }
 
@@ -58,5 +62,4 @@ public class Album implements Comparable<Album>
             return this.albumTitle.compareTo(t.albumTitle);
         }
     }
-    
 }

@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class AlbumCollection {
     private Album[] albums;
@@ -31,5 +32,51 @@ public class AlbumCollection {
     //toString method to print attributes of albums rather than printing a memory location
     public String toString() {
         return "\nAlbums: " + Arrays.toString(albums);
+    }
+
+    public String pinkFloyd() {
+        Track[] track = null;
+        ArrayList<Track> totalTime = new ArrayList<>();
+        String finalTime = null;
+        for (int i = 0; i < albums.length; i++) {
+            if (albums[i].getArtist().equals("Pink Floyd")) {
+                track = albums[i].getTracks();
+                for (int t = 1; t < track.length; t++) {
+                    track[0].getDuration().add(track[t].getDuration());
+                }
+                totalTime.add(track[0]);
+            }
+        }
+        for (int i = 1; i < totalTime.size(); i++) {
+            totalTime.get(0).getDuration().add(totalTime.get(i).getDuration());
+        }
+        finalTime = totalTime.get(0).getDuration().toString();
+        return finalTime;
+    }
+
+    public String largestTracks() {
+        Album largestNo = albums[0];
+        for (int i = 0; i < albums.length - 1; i++) {
+            if (albums[i].getNoTracks() > largestNo.getNoTracks()) {
+                largestNo = albums[i];
+            }
+        }
+        return largestNo.toString();
+    }
+
+    public String longestTrack(){
+        Track[] track = null;
+        Track longestTrack = new Track("","00:00:00");
+        for(int i = 0; i < albums.length; i++)
+        {
+            track = albums[i].getTracks();
+            for (int t = 0; t < track.length; t++)
+            {
+                if(track[t].getDuration().getTotal() > longestTrack.getDuration().getTotal()){
+                    longestTrack = track[t];
+                }
+            }
+        }
+        return longestTrack.toString();
     }
 }

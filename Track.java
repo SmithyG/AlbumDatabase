@@ -1,8 +1,7 @@
-public class Track
-{
+public class Track {
     private String title;
     private Duration duration;
-    
+
     public static void main(String[] args) {
     }
 
@@ -29,8 +28,7 @@ public class Track
     }
 
     //toString method in order to return details about a Track in String format
-    public String toString()
-    {
+    public String toString() {
         String stringDuration = this.duration.toString();
         return title + " : " + stringDuration;
     }
