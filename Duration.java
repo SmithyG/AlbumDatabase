@@ -74,9 +74,14 @@ public class Duration {
         return seconds;
     }
 
+    //The getTotal method creates a concatenated String of a Tracks attributes and is then parsed as an int
+    //This is so that a comparison can be made easily
     public int getTotal() {
+        //This String object tot creates a String with the int values of a Track object
+        //No arithmetic is carried out as the int values are concatenated
         String tot = "" + hours + minutes + seconds;
         int total = Integer.parseInt(tot);
+        //The String is parsed back to an int value to act as the final comparison value and returned as total
         return total;
     }
 
