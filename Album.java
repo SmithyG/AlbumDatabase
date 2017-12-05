@@ -5,7 +5,19 @@ public class Album implements Comparable<Album> {
     private Track[] tracks;
 
     public static void main(String[] args) {
-
+        //TEST HARNESS
+        Album a1 = new Album();
+        Track[] tracksTest = new Track[1];
+        Track t1 = new Track("Test Track","00:03:23");
+        tracksTest[0] = t1;
+        Album a2 = new Album("Test Artist","Test Album",tracksTest);
+        a2.getArtist();
+        a2.getAlbumTitle();
+        a2.getTracks();
+        a2.getNoTracks();
+        a2.toString();
+        a2.compareTo(a1);
+        //All methods of the Album class are ran here. 100% code coverage
     }
 
     //Default constructor
