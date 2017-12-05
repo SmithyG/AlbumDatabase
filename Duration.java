@@ -6,6 +6,18 @@ public class Duration {
     private int seconds;
 
     public static void main(String[] args) {
+        //TEST HARNESS
+        Duration d1 = new Duration();
+        Duration d2 = new Duration(0,3,24);
+        Duration d3 = new Duration("00:03:45");
+        Duration d4 = new Duration("00:03:20");
+        d2.getTotal();
+        d2.getSeconds();
+        d2.getMinutes();
+        d2.getHours();
+        d2.toString();
+        d2.add(d3);
+        //100% Method coverage
     }
 
     //Constructor that takes integer arguments to build Duration with.

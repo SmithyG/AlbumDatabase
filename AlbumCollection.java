@@ -1,17 +1,27 @@
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class AlbumCollection {
     private Album[] albums;
 
     public static void main(String[] args) {
-        /* ArrayList<Album> albums = new ArrayList<>();
-        //POPULATE WITH ARRAY LIST, THEN EMPTY ARRAY LIST INTO PERFECT ARRAY
-        Track t1 = new Track("GnarlyGuyAnthem", "02:20:12");
-        Track t2 = new Track("Joyclen Flores", "04:20:13");
-        Track[] tracks = new Track[5];
-        Album a1 = new Album("Test Album", "Oh fuck", tracks);
-        albums.add(a1); */
+        //TEST HARNESS
+        Track t1 = new Track("Test Track","00:03:35");
+        Track[] tracksTest = new Track[1];
+        Album a1 = new Album();
+        Album[] albumTest = new Album[1];
+        albumTest[0] = a1;
+        AlbumCollection ac1 = new AlbumCollection(albumTest);
+        AlbumCollection ac2 = new AlbumCollection();
+        ac1.getAlbums();
+        ac1.toString();
+        ac1.largestTracks();
+        ac1.longestTrack();
     }
 
     //Constructor for AlbumCollection with no arguments

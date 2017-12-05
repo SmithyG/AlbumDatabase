@@ -17,7 +17,6 @@ public class Album implements Comparable<Album> {
         a2.getNoTracks();
         a2.toString();
         a2.compareTo(a1);
-        //All methods of the Album class are ran here. 100% code coverage
     }
 
     //Default constructor

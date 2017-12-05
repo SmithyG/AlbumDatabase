@@ -3,6 +3,12 @@ public class Track {
     private Duration duration;
 
     public static void main(String[] args) {
+        //TEST HARNESS
+        Track t1 = new Track("Test Track","00:03:45");
+        Track t2 = new Track();
+        t1.getTitle();
+        t1.getDuration();
+        t1.toString();
     }
 
     //Returns the title of the Track
